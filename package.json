@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "concurrently -c \"blue,magenta\" \"vite dev\" \"npx ampx sandbox\"",
     "build": "tsc && vite build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
@@ -25,6 +25,7 @@
     "@vitejs/plugin-react": "^4.2.1",
     "aws-cdk": "^2.138.0",
     "aws-cdk-lib": "^2.138.0",
+    "concurrently": "^9.1.2",
     "constructs": "^10.3.0",
     "esbuild": "^0.20.2",
     "eslint": "^8.57.0",
